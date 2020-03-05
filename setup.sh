@@ -57,7 +57,7 @@ link_file(){
 # do not support proper symlinks -- especially MSysGit on Windows.
 BASHRC_STUB="$CONFIG_DIR/bashrc.stub"
 echo "export DOTFILES=\"$CONFIG_DIR\"" > "$BASHRC_STUB"
-echo '. $DOTFILES/bashrc"' >> "$BASHRC_STUB"
+echo '. "$DOTFILES/bashrc"' >> "$BASHRC_STUB"
 install_file "$BASHRC_STUB" .bashrc
 rm -f "$BASHRC_STUB"
 
