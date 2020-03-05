@@ -62,6 +62,7 @@ install_file "$BASHRC_STUB" .bashrc
 rm -f "$BASHRC_STUB"
 
 # link_file "$LINK_DIR/bash_profiles" .bash_profile
+link_file "$LINK_DIR/bash_profile" .bash_profile
 link_file "$LINK_DIR/gitconfig" .gitconfig
 link_file "$LINK_DIR/vimrc" .vimrc
 
