@@ -23,11 +23,11 @@ STAMP=$(date +%y%m%dT%H%M%S)
 # Or if the file is a symlink, it is simply deleted.
 
 clear_file() {
-  file="$1"
+  f="$1"
   if [ -h "$f" ]; then
     (set -x; rm "$f")
   elif [ -f "$f" ]; then
-    bk = "$f.$STAMP"
+    bk="$f.$STAMP"
     (set -x; mv "$f" "$bk")
   fi 
 }
@@ -62,6 +62,7 @@ install_file "$BASHRC_STUB" .bashrc
 rm -f "$BASHRC_STUB"
 
 # link_file "$LINK_DIR/bash_profiles" .bash_profile
+link_file "$LINK_DIR/gitconfig" .gitconfig
 link_file "$LINK_DIR/vimrc" .vimrc
 
 

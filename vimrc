@@ -53,11 +53,26 @@ filetype plugin indent on
 
 " Options
 
+"Update time for vim signify"
+set updatetime=100
+
+"
 " Hit '%' on 'if' to jump to 'else'
 runtime macros/matchit.vim
 
 " Colorschemes
-colorscheme molokai
+if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
+        let $t_Co = 256
+    colorscheme molokai
+else
+    colorscheme delek
+endif
+
+if &term =~ '256color'
+    " Disable background color erase so that color schemes work properly
+    " when Vim is used inside tmux and GNU screen
+    set t_ut=
+endif
 
 " Screen splitting behavior
 set splitbelow
@@ -76,3 +91,17 @@ set softtabstop=4
 set nu
 
 set vb "Do not beep on errors
+
+set scrolloff=3 " When scrolling, keep cursor 3 lines away from screen border
+" -- Highlighting --
+set cursorline
+set background=dark
+syntax on   
+
+" Highlight EOL spaces
+highlight WhiteSpaceEOL ctermbg=lightgreen
+match WhiteSpaceEOL /\s\+$/
+
+" Highlight leading tab/space mixtures
+highlight LeadingTabSpaceMix ctermbg=lightgreen
+match LeadingTabSpaceMix /^\s*\(\t \)\|\( \t\)\s*/
