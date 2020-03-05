@@ -1,3 +1,6 @@
-[user]
-    name = Michael Pinkert
-    email = mpinkert91@gmail.com
+[core]
+	editor = vim
+[rebase]
+	autosquash = true
+[alias]
+	graph = log --graph --oneline --decorate --all
