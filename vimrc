@@ -46,10 +46,16 @@ Plugin 'tomasr/molokai'
 
 " Version control integration
 Plugin 'mhinz/vim-signify'
-
+let g:signify_sign_change ='*'
 
 call vundle#end()
 filetype plugin indent on
+
+
+" Incorporate all files in vimrc.d
+for f in split(glob($DOTFILES . '/vimrc.d/*.vim'), '\n')
+    exe 'source' f
+endfor
 
 " Options
 
@@ -63,7 +69,7 @@ runtime macros/matchit.vim
 " Colorschemes
 if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
         let $t_Co = 256
-    colorscheme molokai
+    colorscheme molokai_git
 else
     colorscheme delek
 endif
@@ -95,7 +101,6 @@ set vb "Do not beep on errors
 set scrolloff=3 " When scrolling, keep cursor 3 lines away from screen border
 " -- Highlighting --
 set cursorline
-set background=dark
 syntax on   
 
 " Highlight EOL spaces
