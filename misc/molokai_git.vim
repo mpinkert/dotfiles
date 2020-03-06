@@ -1,5 +1,5 @@
 " Vim color file - Modified from molokai (source below)
-" Must be placed in ~/.vim/colors to work properly
+" Must be symbolically linked to ~/.vim/colors/molokai_git.vim to work properly
 "
 " Author: Tomas Restrepo <tomas@winterdom.com>
 " https://github.com/tomasr/molokai
