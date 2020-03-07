@@ -41,9 +41,6 @@ Plugin 'scrooloose/nerdcommenter'
 " Language code checker
 Plugin 'vim-syntastic/syntastic'
 
-"Colormaps
-Plugin 'tomasr/molokai'
-
 " Version control integration
 Plugin 'mhinz/vim-signify'
 let g:signify_sign_change ='*'

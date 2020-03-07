@@ -65,6 +65,6 @@ rm -f "$BASHRC_STUB"
 link_file "$LINK_DIR/bash_profile" .bash_profile
 link_file "$LINK_DIR/gitconfig" .gitconfig
 link_file "$LINK_DIR/vimrc" .vimrc
-link_file "$LINK_DIR/misc/molokai_git.vim" ~/.vim/colors/molokai_git.vim
+install_file "$LINK_DIR/misc/molokai_git.vim" .vim/colors/molokai_git.vim
 
 
