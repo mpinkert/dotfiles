@@ -40,6 +40,10 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Language code checker
 Plugin 'vim-syntastic/syntastic'
+let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 0
 
 " Version control integration
 Plugin 'mhinz/vim-signify'
@@ -93,6 +97,8 @@ set softtabstop=4
 
 set nu
 
+" Interface changes
+set showcmd
 set vb "Do not beep on errors
 
 set scrolloff=3 " When scrolling, keep cursor 3 lines away from screen border
