@@ -49,6 +49,30 @@ let g:syntastic_check_on_wq = 0
 Plugin 'mhinz/vim-signify'
 let g:signify_sign_change ='*'
 
+" Add the sneak command
+Plugin 'justinmk/vim-sneak'
+
+" Add :Abolish, :Subvert/:S, and coerce cases cr(x)
+Plugin 'tpope/vim-abolish'
+
+" Add cs(x)(y), change surroundings from x to y e.g. 'abc' to [abc]
+Plugin 'tpope/vim-surround'
+
+" Add support for plugin commands to .
+Plugin 'tpope/vim-repeat'
+
+" Add a status bar
+Plugin 'bling/vim-airline'
+
+" Auto highlight unique characters in a line
+Plugin 'unblevable/quick-scope'
+
+" Add the ai and ii commands to move inbetween indent levels
+Plugin 'michaeljsmith/vim-indent-object'
+
+" Highlight conflict markers in git
+Plugin 'rhysd/conflict-marker.vim'
+
 call vundle#end()
 filetype plugin indent on
 
