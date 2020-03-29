@@ -3,7 +3,7 @@
 # exit automatically if the pipeline returns a non-zero status
 set -e
 
-# Set the configuratino dir to the dotfiles directory
+# Set the configuratino dir to the dotfiles diseectory
 CONFIG_DIR=$(cd "$(dirname $0)"; pwd)
 
 # Set home directory
@@ -67,7 +67,7 @@ rm -f "$BASHRC_STUB"
 link_file "$LINK_DIR/bash_profile" .bash_profile
 link_file "$LINK_DIR/gitconfig" .gitconfig
 link_file "$LINK_DIR/vimrc" .vimrc
-link_file "$CONFIG_DIR/misc/molokai_git.vim" ~/.vim/colors/molokai_git.vim
+install_file "$CONFIG_DIR/misc/molokai_git.vim" ~/.vim/colors/molokai_git.vim
 
 install_file "$LINK_DIR/init.vim" $NVIM_DIR/init.vim 
 
