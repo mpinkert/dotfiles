@@ -13,6 +13,8 @@ USER_DIR=$(pwd)
 #Set the directory linking the dotfiles dir and the user dir
 LINK_DIR=${CONFIG_DIR#$USER_DIR/}
 
+NVIM_DIR=${USER_DIR}/.config/nvim
+
 OS_NAME=$(uname)
 STAMP=$(date +%y%m%dT%H%M%S)
 
@@ -66,5 +68,7 @@ link_file "$LINK_DIR/bash_profile" .bash_profile
 link_file "$LINK_DIR/gitconfig" .gitconfig
 link_file "$LINK_DIR/vimrc" .vimrc
 link_file "$CONFIG_DIR/misc/molokai_git.vim" ~/.vim/colors/molokai_git.vim
+
+install_file "$LINK_DIR/init.vim" $NVIM_DIR/init.vim 
 
 

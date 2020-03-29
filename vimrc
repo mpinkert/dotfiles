@@ -55,6 +55,8 @@ Plugin 'justinmk/vim-sneak'
 " Add :Abolish, :Subvert/:S, and coerce cases cr(x)
 Plugin 'tpope/vim-abolish'
 
+Plugin 'justinmk/molokai'
+
 " Add cs(x)(y), change surroundings from x to y e.g. 'abc' to [abc]
 Plugin 'tpope/vim-surround'
 
@@ -72,6 +74,9 @@ Plugin 'michaeljsmith/vim-indent-object'
 
 " Highlight conflict markers in git
 Plugin 'rhysd/conflict-marker.vim'
+
+" Select arguments of functions as an object with daa, cia, or via
+Plugin 'vim-scripts/argtextobj.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -96,7 +101,7 @@ if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
         let $t_Co = 256
     colorscheme molokai_git
 else
-    colorscheme delek
+    colorscheme molokai
 endif
 
 if &term =~ '256color'
